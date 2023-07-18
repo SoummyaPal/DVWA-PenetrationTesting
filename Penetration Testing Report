@@ -1,0 +1,42 @@
+Penetration Testing Report
+
+  1. Executive Summary:
+    The penetration testing project was conducted on the Damn Vulnerable Web Application (DVWA) hosted on a Windows virtual machine (IP address: XXX.XXX.X.X). 
+    The objective was to assess the application's security posture, identify vulnerabilities, and provide recommendations for improvement.
+    This report highlights the key findings and recommendations resulting from the penetration test.
+  
+  2. Methodology:
+    The penetration test followed a systematic approach encompassing reconnaissance, vulnerability scanning, exploitation, and defacement. 
+    The tools and techniques employed included manual inspection, SQLMap for database testing, John the Ripper for password cracking, and XSS scripts for defacement.
+  
+  
+  3. Findings and Exploitation:
+  
+    a) Database Vulnerability:
+      SQLMap was used to identify the presence of a vulnerable MySQL database (version >=5.0) within DVWA.
+      The 'users' table contained sensitive information, including usernames and passwords.
+      Exploitation involved executing SQL queries to extract and manipulate data within the database.
+    
+    b) Defacement:
+      XSS scripts were injected successfully, leading to the defacement of the DVWA website.
+      Changes made to the website's appearance included altering the background image.
+    
+    c) Password Cracking:
+      John the Ripper was utilized to crack password hashes extracted during the penetration test.
+      Several weak passwords were successfully cracked, highlighting potential security risks.
+  
+  4. Directory Enumeration:
+    SQLMap's crawling feature was employed to enumerate the directory structure of the server.
+    Valuable insights into the server's directories and files were obtained, exposing potential vulnerabilities.
+  
+  5. Recommendations:
+    Based on the findings from the penetration test, the following recommendations are provided to enhance the security of the DVWA application:
+      -Implement secure coding practices to prevent SQL injection vulnerabilities.
+      -Regularly update the database server to the latest stable version to address known vulnerabilities.
+      -Conduct a comprehensive password policy review and enforce strong password requirements.
+      -Implement input validation and output encoding mechanisms to mitigate XSS vulnerabilities.
+      -Perform regular security assessments, including penetration testing, to identify and address emerging threats.
+  
+  6. Conclusion:
+    The penetration testing project on DVWA successfully identified vulnerabilities in the application, including database vulnerabilities, defacement risks, and weak       password practices. 
+    The recommendations provided aim to mitigate these vulnerabilities and enhance the overall security posture of the application.
