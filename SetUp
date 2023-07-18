@@ -1,0 +1,14 @@
+Install Virtual Box: https://www.virtualbox.org/
+Install Windows: https://www.microsoft.com/software-download/windows11
+Install Linux: https://www.kali.org/get-kali/
+
+Open Virtual Box:
+1. Create new virtual machine for Windows.
+2. Create new virtual machine for Linux.
+3. In windows vm: 
+                 - Install DVWA git -> clone https://github.com/digininja/DVWA.git
+                 - Install Xampp -> https://www.apachefriends.org/
+                 - Copy DVWA folder and paste in Xampp-> htdocs
+                 - Open XAMPP, start Apache and SQL.
+                 - Search localhost/dvwa in your browser, if DVWA is successfully hosted on you machine you will DVWA login page in your browser.
+
